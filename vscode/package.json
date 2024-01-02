@@ -1032,7 +1032,7 @@
     "express": "^4.18.2",
     "fuzzysort": "^2.0.4",
     "mocha": "^10.2.0",
-    "ovsx": "^0.8.2",
+    "ovsx": "^0.8.3",
     "path-browserify": "^1.0.1",
     "playwright": "^1.33.0",
     "progress": "^2.0.3",
