@@ -204,8 +204,8 @@ importers:
         specifier: ^0.5.8
         version: 0.5.8
       '@azure/openai':
-        specifier: 1.0.0-beta.5
-        version: 1.0.0-beta.5
+        specifier: 1.0.0-beta.10
+        version: 1.0.0-beta.10
       '@sourcegraph/cody-shared':
         specifier: workspace:*
         version: link:../lib/shared
@@ -626,13 +626,13 @@ packages:
       default-browser-id: 3.0.0
     dev: true
 
-  /@azure-rest/core-client@1.1.4:
-    resolution: {integrity: sha512-RUIQOA8T0WcbNlddr8hjl2MuC5GVRqmMwPXqBVsgvdKesLy+eg3y/6nf3qe2fvcJMI1gF6VtgU5U4hRaR4w4ag==}
-    engines: {node: '>=14.0.0'}
+  /@azure-rest/core-client@1.1.7:
+    resolution: {integrity: sha512-eQdtieYrOfRwsHFuz6vNANpOT567456m8/CpE3cqdVQgLMrn1uua5O8nLS/XN727MsbTgiZP6C0rAkupt3ky7Q==}
+    engines: {node: '>=18.0.0'}
     dependencies:
       '@azure/abort-controller': 1.1.0
       '@azure/core-auth': 1.5.0
-      '@azure/core-rest-pipeline': 1.12.0
+      '@azure/core-rest-pipeline': 1.13.0
       '@azure/core-tracing': 1.0.1
       '@azure/core-util': 1.4.0
       tslib: 2.1.0
@@ -656,31 +656,27 @@ packages:
       tslib: 2.1.0
     dev: false
 
-  /@azure/core-lro@2.5.4:
-    resolution: {integrity: sha512-3GJiMVH7/10bulzOKGrrLeG/uCBH/9VtxqaMcB9lIqAeamI/xYQSHJL/KcsLDuH+yTjYpro/u6D/MuRe4dN70Q==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@azure/abort-controller': 1.1.0
-      '@azure/core-util': 1.4.0
-      '@azure/logger': 1.0.4
-      tslib: 2.1.0
-    dev: false
-
-  /@azure/core-rest-pipeline@1.12.0:
-    resolution: {integrity: sha512-+MnSB0vGZjszSzr5AW8z93/9fkDu2RLtWmAN8gskURq7EW2sSwqy8jZa0V26rjuBVkwhdA3Hw8z3VWoeBUOw+A==}
-    engines: {node: '>=14.0.0'}
+  /@azure/core-rest-pipeline@1.13.0:
+    resolution: {integrity: sha512-a62aP/wppgmnfIkJLfcB4ssPBcH94WzrzPVJ3tlJt050zX4lfmtnvy95D3igDo3f31StO+9BgPrzvkj4aOxnoA==}
+    engines: {node: '>=18.0.0'}
     dependencies:
       '@azure/abort-controller': 1.1.0
       '@azure/core-auth': 1.5.0
       '@azure/core-tracing': 1.0.1
       '@azure/core-util': 1.4.0
       '@azure/logger': 1.0.4
-      form-data: 4.0.0
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       tslib: 2.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@azure/core-sse@2.0.0:
+    resolution: {integrity: sha512-PFmmaUwDmcmtt+q9NLzfhwC5qA2ACDn/5fuy8GVxI+YRv2qRvy1C0rZrwZLvOHe//G4cSRMz1X+CekY/Nlem2w==}
+    engines: {node: '>=18.0.0'}
+    dependencies:
+      tslib: 2.1.0
     dev: false
 
   /@azure/core-tracing@1.0.1:
@@ -705,14 +701,15 @@ packages:
       tslib: 2.1.0
     dev: false
 
-  /@azure/openai@1.0.0-beta.5:
-    resolution: {integrity: sha512-Qjb6eXun6OUGwbHMRYtmjojn8wZf5ATGQHFzxPc+/dWFeLdSj5ahs/yWRAgqff3oL6GmgQFhjCPhAnAbVv5Q3w==}
-    engines: {node: '>=14.0.0'}
+  /@azure/openai@1.0.0-beta.10:
+    resolution: {integrity: sha512-6kixZSMOI5jk9TBwgXrVo5fKUPUudOXxjwCJvAGaQN6NT1Tp3IMrjGou+2iP9iX7GwND9lptxfvafHtK7RX/VA==}
+    engines: {node: '>=18.0.0'}
     dependencies:
-      '@azure-rest/core-client': 1.1.4
+      '@azure-rest/core-client': 1.1.7
       '@azure/core-auth': 1.5.0
-      '@azure/core-lro': 2.5.4
-      '@azure/core-rest-pipeline': 1.12.0
+      '@azure/core-rest-pipeline': 1.13.0
+      '@azure/core-sse': 2.0.0
+      '@azure/core-util': 1.4.0
       '@azure/logger': 1.0.4
       tslib: 2.1.0
     transitivePeerDependencies:
